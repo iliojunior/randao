@@ -3,16 +3,16 @@
   "description": "Plugin mais aleatório da web",
   "version": "1.0.0",
   "manifest_version": 2,
+  "permissions": ["activeTab"],
   "content_scripts": [
     {
       "js": [
         "jquery.min.js",
-        "index.min.js"
+        "constants.js",
+        "functions.js",
+        "index.js"
       ],
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ]
+      "matches": ["<all_urls>"]
     }
   ]
 }
